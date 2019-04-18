@@ -1,0 +1,707 @@
+body {
+    background-color: #eee;
+    color: #797979;
+}
+
+body > div {
+    padding-top: 60px;
+}
+
+li {
+    padding-right: 10px;
+}
+
+.links>a{
+    padding-top: 10px;
+}
+
+.navbar-toggler:hover{
+    cursor: pointer;
+    
+}
+#myBtnTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: #096d96 solid 2px;
+    outline: none;
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 20px;
+    transition: transform .3s;
+}
+
+#myBtnTop:hover {
+    transform: translateY(-5px);
+    background-color: #096d96;
+    color: white;
+}
+
+.btn2 {
+    background-color: transparent;
+    border: 2px solid rgba(255, 118, 125);
+    border-radius: 20px;
+    color: black;
+    padding: 10px;
+    transition: .3s;
+}
+
+.btn2:hover {
+    background-color: rgba(255, 118, 125);
+    color: white;
+    border: 2px solid rgba(255, 118, 125);
+    transform: scale(1);
+}
+
+.btn1 {
+    background-color: rgba(255, 118, 125);
+    border: 2px solid rgba(255, 118, 125);
+    border-radius: 20px;
+    color: white;
+    padding: 10px;
+    transition: .3s;
+}
+
+.btn1:hover {
+    background-color: transparent;
+    color: white;
+    border: 2px solid rgba(255, 118, 125);
+    transform: scale(1);
+}
+
+.btnviewmore {
+    position: absolute;
+    bottom: 5px;
+    right: 20px;
+}
+
+.btnviewmore1 {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+}
+
+.loginbox {
+    background-color: #696969;
+    background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
+    color: white;
+    border-radius: 3px;
+}
+
+.courseheader {
+    background-color: white;
+    color: black;
+}
+
+.courseheader1 {
+    background-color: #4880db;
+    color: white;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 90%;
+    opacity: .7;
+}
+
+.header {
+    background-color: #096d96;
+    background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
+    color: white;
+    position: fixed;
+    z-index: +100;
+    width: 100%;
+}
+
+.footer {
+    background-color: #696969;
+    background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
+    color: white;
+    width: 100%;
+
+}
+
+.center {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.left {
+    text-align: left;
+    float: left;
+}
+
+.right {
+    text-align: right;
+    float: right;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+    text-decoration-line: none;
+    color: aquamarine;
+}
+
+.course1 {
+    background-image: linear-gradient(90deg, rgba(9, 150, 230, 0.5), rgba(72, 130, 120, 0.7)), url(../images/slider3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 65%;
+    margin-top: 15px;
+    transition: .3s;
+    font-family: Verdana,Geneva,Tahoma,Arial,Helvetica,sans-serif!important;
+}
+
+.course1:hover {
+    transform: scale(0.99);
+    box-shadow: 0px 0px 5px 2px rgba(255, 0, 0, 0.3);
+}
+
+.course2 {
+    font-family: Verdana,Geneva,Tahoma,Arial,Helvetica,sans-serif!important;
+    color: black;
+    margin-top: 15px;
+    transition: .3s;
+}
+
+.course2:hover {
+    transform: scale(0.995);
+    box-shadow: 0px 0px 5px 2px rgba(255, 0, 0, 0.3);
+}
+
+
+.courses {
+    margin: 15px;
+}
+
+.coursebox {
+    transition: transform .3s;
+    background-color: white;
+    width: 100%;
+    margin-bottom: 40px;
+    box-shadow: 0px 0px 5px 2px rgba(9, 109, 150, 0.7);
+    border-radius: 3px;
+    backface-visibility: hidden;
+}
+
+.coursebox > div > img {
+    height: inherit;
+    width: 100%;
+}
+
+.coursebox > div > img:hover {
+    opacity: 0.9;
+}
+
+.coursebox > .col {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.coursebox > .col > span {
+    margin: auto;
+}
+
+.coursebox:hover {
+    transform: scale(1.02);
+}
+
+.developer > img {
+    transition: transform .5s;
+}
+
+.developer > img:hover {
+    transform: scale(1.2);
+}
+
+.icon1 {
+    height: 12vw;
+    width: 20vw;
+
+}
+
+.icon2 {
+    height: 13vw;
+    width: 20vw;
+    opacity: .7;
+}
+
+.courseindex {
+    background-color: #eee;
+}
+
+.coursebody {
+    background-color: white;
+    color: #000;
+}
+
+.subheading{
+    color:#096d96;
+    padding: 5px;
+    box-shadow: 0px 0px 2px 2px ;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    font-family: Verdana,Geneva,Tahoma,Arial,Helvetica,sans-serif!important;
+}
+
+.contentbody{
+    word-wrap: break-word;
+    text-align: justify;
+    font-size: 15px !important;
+    font-family: Verdana,Geneva,Tahoma,Arial,Helvetica,sans-serif!important;
+}
+
+.abc {
+    background-color: white;
+    transition: transform .3s;
+    width: 30%;
+    margin: 10px;
+    box-shadow: 2px 3px #4880db;
+    backface-visibility: hidden;
+
+}
+
+.abc:hover {
+    transform: scale(1.03);
+    text-decoration: none;
+    text-decoration-style: none;
+}
+
+.wrap100 {
+    width: 100%;
+}
+
+.wrap90 {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.wrap80 {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.wrap70 {
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation:portrait) {
+    .wrap90 {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .wrap80 {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .wrap70 {
+        margin-right: 25px;
+        margin-left: 25px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    .header,
+    .footer,
+    span {
+        font-size: 14px;
+    }
+
+    .carousel-inner img {
+        width: 100%;
+        height: 50%;
+        opacity: .7;
+    }
+
+    .abc {
+        width: 90%;
+    }
+
+
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+    .wrap90 {
+        margin-right: 80px;
+        margin-left: 80px;
+    }
+
+    .wrap80 {
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+
+    .wrap70 {
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+    .nav-link {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
+
+    .header,
+    .footer,
+    span {
+        font-size: 16px;
+    }
+
+    .carousel-inner img {
+        width: 100%;
+        height: 50%;
+        opacity: .7;
+    }
+
+    .abc {
+        width: 90%;
+    }
+}
+
+@media (min-width: 736px) and (max-width:1023px) and (orientation:landscape) {
+    .wrap90 {
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    .wrap80 {
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+    .wrap70 {
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    .header,
+    .footer,
+    span {
+        font-size: 16px;
+    }
+
+    .fa,
+    a {
+        font-size: 16px;
+    }
+
+    .carousel-inner img {
+        width: 100%;
+        height: 70%;
+        opacity: .7;
+    }
+
+    .abc {
+        width: 30%;
+    }
+
+    .course2 > .col > img {
+        height: 400px;
+        width: 540px;
+    }
+
+}
+
+@media (min-width:414px) and (max-width:767px) and (orientation:portrait) {
+    .wrap90 {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    .wrap80 {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    .wrap70 {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .nav-link {
+        font-size: 10px;
+    }
+
+    .header,
+    .footer,
+    span {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    h4 {
+        font-size: 14px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+    .fa,
+    a {
+        font-size: 10px;
+    }
+
+    .carousel-inner img {
+        width: 100%;
+        height: 50%;
+        opacity: .7;
+    }
+
+    .abc {
+        width: 90%;
+    }
+
+    .course2 > .col > img {
+        height: 300px;
+        width: 380px;
+    }
+
+}
+
+@media (max-width:735px) and (orientation:landscape) {
+    .wrap90 {
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+
+    .wrap80 {
+        margin-right: 40px;
+        margin-left: 40px;
+    }
+
+    .wrap70 {
+        margin-right: 50px;
+        margin-left: 50px;
+    }
+
+    .nav-link {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    .header,
+    .footer,
+    span {
+        font-size: 16px;
+    }
+
+    .fa,
+    a {
+        font-size: 16px;
+    }
+
+    .carousel-inner img {
+        width: 100%;
+        height: 70%;
+        opacity: .7;
+    }
+
+    .abc {
+        width: 30%;
+    }
+
+    .course2 > .col > img {
+        height: 400px;
+        width: 450px;
+    }
+
+}
+
+@media (max-width:413px) and (orientation:portrait) {
+    .wrap90 {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .wrap80 {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .wrap70 {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    .nav-link {
+        font-size: 10px;
+    }
+
+    .header,
+    .footer,
+    span {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+
+    h4 {
+        font-size: 14px;
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+    .fa,
+    a {
+        font-size: 10px;
+    }
+
+    .carousel-inner img {
+        width: 100%;
+        height: 50%;
+        opacity: .7;
+    }
+
+    .abc {
+        width: 90%;
+    }
+
+    .course2 > .col > img {
+
+        height: 300px;
+        width: 350px;
+    }
+    .fullmenu{
+        display: none;
+    }
+    .bars{
+        display: block;
+    }
+
+
+}
+
+
+
+
+/* experimental code here */
+
+
