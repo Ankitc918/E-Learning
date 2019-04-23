@@ -71,13 +71,13 @@ include('include/header.php');
                                 <br>
                                 Education:
                                 <br>
-                                <b>B.Sc.,MCA</b>
+                                <b>B.Sc(IT),MCA</b>
                             </span>
                         </div>
                     </div>
                 </div>
                 <div class="col col-7 center left">
-                    <h5>Always willing to innovate the new things which can improve the existing technology. Eager to learn new technologies and methodologies.<br> MTA-IND, Noida helped me learn web development in efficient & interactive way during my internship period.
+                    <h5>Always willing to innovate the new things which can improve the existing technology.<br> MTA-IND, Noida helped me learn web development in efficient & interactive way during my internship period.
 I also worked as a part of web development team in MTA-IND, Noida. It was a great experience working with the team, they are supportive and helpful.</h5>
                 </div>
 

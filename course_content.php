@@ -4,6 +4,7 @@ include('include/conn.php');
 $msg="";
 $course=$_GET["course"];
 $heading=$_GET["heading"];
+
 ?>
 <html>
 
@@ -61,6 +62,7 @@ $heading=$_GET["heading"];
                                 {
                                 while($row=mysqli_fetch_assoc($res)){
                                 echo "<tr><td><a style='color:#797979' href='course_content.php?course=".$course."&heading=".$row["heading"]."'><i class='fa fa-caret-right'>&nbsp;</i>".$row["course"]." - ".$row["heading"]."</a></td></tr>";
+            
                                 }
                                 }
                                 else{
@@ -84,8 +86,10 @@ $heading=$_GET["heading"];
                         </div>
                     </div>
                     <hr>
+                   
                     <div class='row'>
-                        <span class='col left'><button class='btn btn-light'><i class='fa fa-arrow-circle-left'> Previous Page</i></button></span>
+                        <span class='col left'><a href='course_content.php?course=<?php echo $course ?>&heading=Home'><button class='btn btn-light'><i class='fa fa-arrow-circle-left'> Previous Page</i></button></a></span>
+                        <span class='col center'><?php echo"<a target='_blank' href='converttopdf.php?course=".$course."&heading=".$heading."'><button class='btn btn-light'><i class='fa fa-file-pdf-o'></i> Pdf version</button></a>"; ?></span>
                         <span class='col right'><button class='btn btn-light'>Next Page <i class='fa fa-arrow-circle-right'></i></button></span>
                     </div>
                     <hr>
@@ -98,6 +102,7 @@ $heading=$_GET["heading"];
                                 while($row=mysqli_fetch_assoc($res)){
                                     echo "<h2 class='subheading'>".$cname." - ".$row["heading"]."</h2><br>";
                                 echo "<div class='contentbody'>".$row["content"]."</div>";
+                                
                                 }
                                 }
                                 else{
@@ -123,3 +128,4 @@ $heading=$_GET["heading"];
 
 </html>
 <?php include('include/footer.php'); ?>
+

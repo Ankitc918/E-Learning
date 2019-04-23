@@ -132,10 +132,11 @@ include('include/conn.php');
                 $default="Home";
 $sql="SELECT * FROM course";
 $res=mysqli_query($conn,$sql);
+                $i=1;
 if(mysqli_num_rows($res)>0)
 {
     while($row=mysqli_fetch_assoc($res)){
-        if($row["c_id"]%2!=0){
+        if($i%2!=0){
         echo "<div class='row course1' style='background-image: linear-gradient(90deg, rgba(9, 150, 230, 0.5), rgba(72, 130, 120, 0.7)), url(data:image/*;base64,".base64_encode($row["c_image"]).");'>
                     
                     <div class='col col-md-6 center'>
@@ -166,6 +167,7 @@ if(mysqli_num_rows($res)>0)
 
                 </div>";
         }
+        $i++;
     }
 }
 else{

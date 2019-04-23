@@ -56,6 +56,9 @@
                         <a href="https://www.linkedin.com/in/ankit-chauhan-349a08165" target="_blank">
                             <li class="fa fa-linkedin fa-lg" title="Follow us on Linkedin"></li>
                         </a>
+                        <a href="https://github.com/Ankitc918" target="_blank">
+                            <li class="fa fa-github fa-lg" title="Follow us on Github"></li>
+                        </a>
 
                     </ul>
                 </h5>
