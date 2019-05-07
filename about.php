@@ -24,7 +24,7 @@ include('include/header.php');
         <br>
         <div class="wrap70">
             <div class="row">
-                <h5>
+                <h6>
                     <p>E-Learning is the use of technology to enable people to learn anytime and anywhere. Typically e-learning is used to describe online modules which learners work through at a time, pace and place that is convenient to them. E-Learning contributes to our mission of “helping people learn online”. We love to see how people transform themselves and their lives by learning creative skills.
                     </p>
                     <p>
@@ -43,7 +43,7 @@ include('include/header.php');
                             </li>
                         </ul>
                     </p>
-                </h5>
+                </h6>
             </div>
         </div>
         <br>
@@ -57,8 +57,8 @@ include('include/header.php');
                 <div class="col col-5" style="background-color:lavender;color:black;">
                     <div class="row">
                         <div class="col">
-                            <figure class="developer" style="margin:5px;margin-left:-10px;">
-                                <img src="images/ankit.jpg" class="img-responsive img-fluid" alt="about">
+                            <figure class="developer wow flip" style="margin:5px;margin-left:-10px;">
+                                <img src="images/ankit.jpg" class="img-fluid" style="width:110%;" alt="about">
 
                             </figure>
                         </div>
@@ -77,8 +77,8 @@ include('include/header.php');
                     </div>
                 </div>
                 <div class="col col-7 center left">
-                    <h5>Always willing to innovate the new things which can improve the existing technology.<br> MTA-IND, Noida helped me learn web development in efficient & interactive way during my internship period.
-I also worked as a part of web development team in MTA-IND, Noida. It was a great experience working with the team, they are supportive and helpful.</h5>
+                    <h6>Always willing to innovate the new things which can improve the existing technology.<br> MTA-IND, Noida helped me learn web development in efficient & interactive way during my internship period.
+I also worked as a part of web development team in MTA-IND, Noida. It was a great experience working with the team, they are supportive and helpful.</h6>
                 </div>
 
 

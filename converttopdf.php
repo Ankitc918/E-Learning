@@ -1,7 +1,7 @@
 
 <?php
 include('include/conn.php');
-require('fpdf/pdfcrowd.php');
+require('pdfcrowd/pdfcrowd.php');
 $sql="SELECT * FROM course_content WHERE course='".$_GET["course"]."' AND heading='".$_GET["heading"]."'";
 $res=mysqli_query($conn,$sql);
 if(mysqli_num_rows($res)>0){

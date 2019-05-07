@@ -21,7 +21,7 @@ if(isset($_POST['login']))
             else if($row["usertype"]=="user"){
                 $_SESSION["name"]=$uname;
                 $msg="Welcome ".$uname;
-                header("location: about.php");
+                header("location: index.php");
             }
             else{
                 $msg="incorrect details";

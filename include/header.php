@@ -1,12 +1,17 @@
 <?php session_start(); ?>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <script>new WOW().init();</script>
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+</head>
 <header>
     <div class="header">
-        <div class="row wrap90" style="padding:2px;">
+        <div class="row wrap90" style="padding-top:8px;padding-bottom:8px">
             <div class="col col-sm-3 left" style="margin:auto;">
+                <a href="index.php"> <img class="img-fluid" src="./images/n2logo.png" alt="logo" style="height:70px"></a>
 
-                <h2>
-                    <a href="index.php"><i class="fa fa-graduation-cap" style="color:gold"></i><i style="color:lightgoldenrodyellow;font-family:comic-sans;">E-Learning</i></a>
-                </h2>
 
             </div>
             <!--  full screen menu -->
@@ -16,10 +21,10 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="index.php"><i class="fa fa-home"></i> Home</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="courses" href="#"><i class="fa fa-book"></i> Courses</a>
-                            <div class="dropdown-menu" aria-labelledby="Preview">
-                               <?php 
+                            <div class="dropdown-menu" style="margin-top:0px" aria-labelledby="dropdown-menu-button">
+                                <?php 
                                 include('include/conn.php');
                                     $msg="";
                                                 $default="Home";
@@ -45,13 +50,24 @@
                         </li>
                         <?php if(empty($_SESSION["name"])){ ?>
                         <li class="nav-item">
-                            <a id="login" class="nav-link" style="margin-top:-8px;"><a href="login.php" onclick="checkuser()"><i class="fa fa-lock"></i> Login</a>/<a href="register.php"> Register</a></a>
+                            <a id="login" class="nav-link" style="margin-top:-8px;"><a href="login.php"><i class="fa fa-lock"></i> Login </a>/<a href="register.php"> Register</a></a>
                         </li>
                         <?php } else{?>
                         <li class="nav-item">
                             <a id="logout" class="nav-link" style="margin-top:-8px;"><a href="logout.php"><i class="fa fa-id-badge"></i>
                                     <?php print $_SESSION["name"] ?>(logout)</a></a>
                         </li>
+                        <?php $sql="SELECT * FROM login WHERE username='".$_SESSION["name"]."' AND usertype='admin'";
+                            $res=mysqli_query($conn,$sql);
+                            if(mysqli_num_rows($res)>0){
+                                while($row=mysqli_fetch_assoc($res)){
+                                   
+                               echo " <li class='nav-item'>
+                                    <a id='adminpanel' class='nav-link wow fadeIn' href='admin/index.php'>Admin Panel</a>
+                                </li>";
+                                }
+                            }
+                                    ?>
                         <?php } ?>
 
                     </ul>
@@ -61,13 +77,13 @@
 
             <!-- short menu -->
             <!--Navbar-->
-            
-            
+
+
             <!-- end short menu -->
         </div>
 
     </div>
-    <button class="fa fa-chevron-up" onclick="pagetopFunction()" id="myBtnTop" title="Go to top"></button>
+    <button class="fa fa-chevron-up wow bounceInUp" onclick="pagetopFunction()" id="myBtnTop" title="Go to top"></button>
 </header>
 <script>
     // When the user scrolls down 20px from the top of the document, show the button
@@ -85,8 +101,10 @@
 
     // When the user clicks on the button, scroll to the top of the document
     function pagetopFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        $("html, body").animate({
+            scrollTop: 0
+        }, 1000);
+        return false;
     }
 
 </script>

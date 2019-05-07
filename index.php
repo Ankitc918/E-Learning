@@ -11,23 +11,23 @@ include('include/conn.php');
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
-
+    
     <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Trade+Winds" rel="stylesheet">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-
 </head>
 
 <body>
     <div class="">
-        <section class="heading" style="padding-top:15px;padding-bottom:15px">
-            <div class="center">
-                <span style="font-size:32px;padding:50px">Welcome to <b style="color:seagreen">E-Learning</b></span>
+        <section class="heading" style="padding-top:30px;padding-bottom:15px">
+            <div class="center wow bounce">
+                <span style="font-size:32px;padding:50px">Welcome to <b style="color:seagreen;font-family:Love Ya Like A Sister, cursive;">E-Learning</b></span>
             </div>
         </section>
+  
         <section class="banner wrap100">
             <div id="slider" class="carousel slide" data-ride="carousel">
                 <ul class="carousel-indicators">
@@ -37,20 +37,21 @@ include('include/conn.php');
                 </ul>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="images/slider1.jpg" alt="Los Angeles">
-                        <div class="carousel-caption">
-                            <h3>Programming is Fun!</h3>
+                        <img class="wow shake" src="images/slidern1.jpg" alt="Los Angeles">
+                         
+                        <div class="carousel-caption wow fadeInLeft">
+                             <h3>Programming is Fun!</h3>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="images/slider2.jpg" alt="Chicago">
-                        <div class="carousel-caption">
+                        <img class="wow swing" src="images/slidern2.jpg" alt="Chicago">
+                        <div class="carousel-caption wow fadeInLeft">
                             <h3>Easy to Learn!</h3>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="images/slider3.jpg" alt="New York">
-                        <div class="carousel-caption">
+                        <img class="wow bounce" src="images/slider3.jpg" alt="New York">
+                        <div class="carousel-caption wow fadeInLeft">
                             <h3>We can do a lot through programming!</h3>
                         </div>
                     </div>
@@ -65,61 +66,10 @@ include('include/conn.php');
         </section>
         <br>
 
-        <!-- old main content -->
-
-        <!--
-        <section class="maincontent wrap90">
-            <div class="center">
-                <h2>
-                    <i class="fa fa-cubes" aria-hidden="true" style="color:#797979"><span>Tutorials <b style="color:seagreen">Library</b></span></i>
-                </h2>
-            </div>
-            <br>
-            <section class="courses">
-                <div class="row coursebox">
-                    <div class="col"><img src="images/slider1.jpg"></div>
-                    <div class="col">
-                       <div class="center">bb</div>
-                        <a class="btn btn-info btn-sm btnviewmore" href="#">view <i class="fa fa-external-link"></i></a>
-                    </div>
-                </div>
-                <div class="row coursebox">
-                    <div class="col">
-                       <div class="center">aa</div>
-                        <a class="btn btn-info btn-sm btnviewmore1" href="#">view <i class="fa fa-external-link"></i></a>
-                    </div>
-                    <div class="col"><img src="images/slider2.jpg"></div>
-                </div>
-                <div class="row coursebox">
-                    <div class="col"><img src="images/slider3.jpg"></div>
-                    <div class="col">
-                       <div class="center">bb</div>
-                        <a class="btn btn-info btn-sm btnviewmore" href="#">view <i class="fa fa-external-link"></i></a>
-                    </div>
-                </div>
-                <div class="row coursebox">
-                    <div class="col">
-                       <div class="center">aa</div>
-                        <a class="btn btn-info btn-sm btnviewmore1" href="#">view <i class="fa fa-external-link"></i></a>
-                    </div>
-                    <div class="col"><img src="images/slider2.jpg"></div>
-                </div>
-                <div class="row coursebox">
-                    <div class="col"><img src="images/slider1.jpg"></div>
-                    <div class="col">
-                       <div class="center">bb</div>
-                        <a class="btn btn-info btn-sm btnviewmore" href="#">view <i class="fa fa-external-link"></i></a>
-                    </div>
-                </div>
-            </section>
-        </section>
-        -->
-
-
         <!-- new main content  -->
 
         <section class="maincontent wrap100">
-            <div class="center">
+            <div class="center wow bounce">
                 <span>
                     <i class="fa fa-cubes" aria-hidden="true" style="color:#797979;font-size:32px"><span style="font-size:32px">Tutorials <b style="color:seagreen">Library</b></span></i>
                 </span>
@@ -140,9 +90,9 @@ if(mysqli_num_rows($res)>0)
         echo "<div class='row course1' style='background-image: linear-gradient(90deg, rgba(9, 150, 230, 0.5), rgba(72, 130, 120, 0.7)), url(data:image/*;base64,".base64_encode($row["c_image"]).");'>
                     
                     <div class='col col-md-6 center'>
-                        <span style='font-size:80px;color:#eee;font-family:Love Ya Like A Sister, cursive;'>Learn ".$row["c_name"]."</span>
-                        <p>".$row["c_description"]."</p>
-                        <a href='course_content.php?course=".$row["c_name"]."&heading=".$default."'><button class='btn1'>
+                        <span class='wow fadeIn' data-wow-delay='.4s' style='font-size:80px;color:#eee;font-family:Love Ya Like A Sister, cursive;'>Learn ".$row["c_name"]."</span>
+                        <p class='wow fadeInRight' data-wow-delay='.5s'>".$row["c_description"]."</p>
+                        <a href='course_content.php?course=".$row["c_name"]."&heading=".$default."'><button class='btn1 wow fadeInUp' data-wow-delay='.6s'>
                             Start Learning <i class='fa fa-external-link'></i>
                         </button></a>
                     </div>
@@ -154,9 +104,9 @@ if(mysqli_num_rows($res)>0)
             echo "<div class='row course2'>
 
                     <div class='col col-md-6 center'>
-                        <span style='font-size:80px;color:#000;font-family:Love Ya Like A Sister, cursive;'>Learn ".$row["c_name"]."</span>
-                        <p>".$row["c_description"]."</p>
-                        <a href='course_content.php?course=".$row["c_name"]."&heading=".$default."'><button class='btn2'>
+                        <span class='wow fadeIn' data-wow-delay='.4s' style='font-size:80px;color:#000;font-family:Love Ya Like A Sister, cursive;'>Learn ".$row["c_name"]."</span>
+                        <p class='wow fadeInLeft' data-wow-delay='.5s'>".$row["c_description"]."</p>
+                        <a href='course_content.php?course=".$row["c_name"]."&heading=".$default."'><button class='btn2 wow fadeInUp' data-wow-delay='.6s'>
                             Start Learning <i class='fa fa-external-link'></i>
                         </button></a>
                     </div>
@@ -176,7 +126,7 @@ else{
     ?>
               <br>
                <hr class="center" style="width:350px;border:2px solid #096d96">
-               <!-- testing ends -->
+               <!-- new main content end -->
                
                <!-- content without loop 
                 <div class="row course1">
@@ -236,6 +186,7 @@ else{
                 -->
 
             </section>
+      
         </section>
     </div>
 </body>

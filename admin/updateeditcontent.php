@@ -1,28 +1,37 @@
 <?php 
 
 include('include/conn.php');
-$sql1="SELECT c_name FROM course";
+$getcourse=$_GET["course"];
+$getheading=$_GET["heading"];
+$sql1="SELECT * FROM course_content WHERE course='".$getcourse."' AND heading='".$getheading."'";
 $res1=mysqli_query($conn,$sql1);
+if(mysqli_num_rows($res1)>0){
+    while($row1=mysqli_fetch_assoc($res1)){
+        $getcontent=$row1["content"];
+        $contentid=$row1["id"];
+    }
+}
 ?>
 <?php 
  if(isset($_POST['submit'])){
-     $course=mysqli_real_escape_string($conn,$_POST['course']);
+     
      $heading=mysqli_real_escape_string($conn,$_POST['heading']);
      $content=mysqli_real_escape_string($conn,$_POST['content']);
-     $sql="INSERT INTO course_content(course,heading,content) VALUES('$course','$heading','$content')";
+     $sql="UPDATE course_content SET heading='".$heading."',content='".$content."' WHERE id='".$contentid."'";
      $res=mysqli_query($conn,$sql);
      if($res!=null){
-         echo "successfully added your content!";
+         echo "<script>alert('successfully updated your content!');
+         window.location.href='updatecourse_content.php';</script>";
      }
      else{
-         echo "failed to update content";
+         echo "<script>alert('failed to update content');</script>";
      }
  } ?>
 <script src="https://cdn.ckeditor.com/4.4.7/full/ckeditor.js"></script>
 <html>
 
 <head>
-    <title>Admin Home</title>
+    <title>Admin Edit Content</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="../css/bootstrap/css/bootstrap.min.css">
@@ -48,27 +57,20 @@ $res1=mysqli_query($conn,$sql1);
 
 
         <div id="Add" class="w3-container blog" style="display">
-            <h2 style="color:#4880db" class="center">Add Course Content</h2>
-            <form action="" id="addcourse_contenttodb" class="form-group" method="POST" style="background-color:white;border-radius:5px;">
-                <div class="container">
+           <span class="right"><a class="btn btn-dark" href="updatecourse_content.php">Back</a></span>
+            <h2 style="color:#4880db" class="center">Edit Course Content</h2>
+            
+                <div class="container" style="background-color:white;border-radius:5px;">
                     <br>
                     
+                   <section class="editcontent" style="display">
+                    <form action="" id="editblogtodb" class="form-group" method="POST" style="background-color:white;border-radius:5px;">
                     <div class="row">
                         <div class="col col-sm-3">
                             <label for="course">Course</label>
                         </div>
                         <div class="col col-sm">
-                            <select name="course" class="form-control" required>
-                              <option  disabled selected value>--select course--</option>
-                               <?php
-                                if(mysqli_num_rows($res1)>0)
-                                    {
-                                    while($row1=mysqli_fetch_assoc($res1)){
-                                        echo "<option value='".$row1["c_name"]."'>".$row1["c_name"]."</option>";
-                                    }
-                                }
-                                ?>
-                            </select>
+                            <input type="text" id="course" name="course" class="form-control" value="<?php echo $getcourse; ?>" disabled required>
                         </div>
                     </div><br>
                     <div class="row">
@@ -76,7 +78,7 @@ $res1=mysqli_query($conn,$sql1);
                             <label for="heading">Heading</label>
                         </div>
                         <div class="col col-sm">
-                            <input type="text" id="heading" name="heading" class="form-control" required>
+                            <input type="text" id="heading" name="heading" class="form-control" value="<?php echo $getheading; ?>" required>
                         </div>
                     </div><br>
                     <div class="row">
@@ -84,7 +86,7 @@ $res1=mysqli_query($conn,$sql1);
                             <label for="content">Content</label>
                         </div>
                         <div class="col col-sm">
-                            <textarea type="textarea" id="content" name="content" class="form-control" required></textarea>
+                            <textarea type="textarea" id="content" name="content" class="form-control"  required><?php echo $getcontent; ?></textarea>
                         </div>
                     </div><br>
 
@@ -93,20 +95,26 @@ $res1=mysqli_query($conn,$sql1);
 
                         </div>
                         <div class="col col-sm">
-                            <button type="submit" id="submit" name="submit" class="btn btn-primary left">Add</button>
+                            <button type="submit" id="submit" name="submit" class="btn btn-primary left">Update</button>
                         </div>
                     </div><br>
-
-                </div>
-            </form>
-            <script>
+                    </form>
+                    </section>
+            </div>
+        </div>
+    </div>
+    </div>
+    </body>
+</html>
+                   
+                  
+                 <script>
                 CKEDITOR.replace('content');
+                
+                function myselected() {
+                  var x = document.getElementById("c_name").value;
+                 var y= document.getElementById("demo").innerHTML = "You selected: " + x;
+                return x;
+                }
 
             </script>
-        </div>
-
-    </div>
-    </div>
-</body>
-
-</html>

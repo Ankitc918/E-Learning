@@ -1,23 +1,41 @@
 <?php 
 
 include('include/conn.php');
-$sql1="SELECT c_name FROM course";
-$res1=mysqli_query($conn,$sql1);
-?>
-<?php 
  if(isset($_POST['submit'])){
-     $course=mysqli_real_escape_string($conn,$_POST['course']);
-     $heading=mysqli_real_escape_string($conn,$_POST['heading']);
-     $content=mysqli_real_escape_string($conn,$_POST['content']);
-     $sql="INSERT INTO course_content(course,heading,content) VALUES('$course','$heading','$content')";
+$sql1="SELECT * FROM course WHERE c_name='".$_POST["cname"]."'";
+$res1=mysqli_query($conn,$sql1);
+if(mysqli_num_rows($res1)>0){
+    while($row1=mysqli_fetch_assoc($res1)){
+        if($row1["c_name"]==$_POST["cname"]){
+            echo "<p class='center' style='color:red;'>course already exist!</p>";
+        }
+    }
+}
+     else{
+ 
+
+?>
+<!-- add new course to database code -->
+<?php 
+
+
+     $cname=mysqli_real_escape_string($conn,$_POST['cname']);
+     $cdes=mysqli_real_escape_string($conn,$_POST['cdes']);
+     $cimage=addslashes(file_get_contents($_FILES["cimage"]["tmp_name"]));
+     $cicon=addslashes(file_get_contents($_FILES["cicon"]["tmp_name"]));
+     $sql="INSERT INTO course(c_name,c_description,date_added,c_image,c_icon) VALUES('$cname','$cdes',Now(),'$cimage','$cicon')";
      $res=mysqli_query($conn,$sql);
      if($res!=null){
-         echo "successfully added your content!";
+         $msg="successfully added new course";
+         echo $msg;
      }
      else{
-         echo "failed to update content";
+         $msg="failed to add new course";
+    echo $msg;
      }
- } ?>
+ }
+ }
+?>
 <script src="https://cdn.ckeditor.com/4.4.7/full/ckeditor.js"></script>
 <html>
 
@@ -45,46 +63,44 @@ $res1=mysqli_query($conn,$sql1);
         </div>
 
     <div class="col col-10">
-
+     
 
         <div id="Add" class="w3-container blog" style="display">
-            <h2 style="color:#4880db" class="center">Add Course Content</h2>
-            <form action="" id="addcourse_contenttodb" class="form-group" method="POST" style="background-color:white;border-radius:5px;">
+            <h2 style="color:#4880db" class="center">Add New Course</h2>
+            <form action="" id="addcoursetodb" class="form-group" method="POST"  enctype="multipart/form-data" style="background-color:white;border-radius:5px;">
                 <div class="container">
                     <br>
                     
                     <div class="row">
                         <div class="col col-sm-3">
-                            <label for="course">Course</label>
+                            <label for="cname">Course Name</label>
                         </div>
                         <div class="col col-sm">
-                            <select name="course" class="form-control" required>
-                              <option  disabled selected value>--select course--</option>
-                               <?php
-                                if(mysqli_num_rows($res1)>0)
-                                    {
-                                    while($row1=mysqli_fetch_assoc($res1)){
-                                        echo "<option value='".$row1["c_name"]."'>".$row1["c_name"]."</option>";
-                                    }
-                                }
-                                ?>
-                            </select>
+                            <input type="text" id="cname" name="cname" class="form-control" required>
                         </div>
                     </div><br>
                     <div class="row">
                         <div class="col col-sm-3">
-                            <label for="heading">Heading</label>
+                            <label for="cdes">Course Description</label>
                         </div>
                         <div class="col col-sm">
-                            <input type="text" id="heading" name="heading" class="form-control" required>
+                            <textarea type="text" id="cdes" name="cdes" class="form-control" required></textarea>
                         </div>
                     </div><br>
                     <div class="row">
                         <div class="col col-sm-3">
-                            <label for="content">Content</label>
+                            <label for="cimage">Course Image</label>
                         </div>
                         <div class="col col-sm">
-                            <textarea type="textarea" id="content" name="content" class="form-control" required></textarea>
+                            <input type="file" id="cimage" name="cimage" class="form-control"  accept="image/*" required>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col col-sm-3">
+                            <label for="cicon">Course Icon</label>
+                        </div>
+                        <div class="col col-sm">
+                            <input type="file" id="cicon" name="cicon" class="form-control"  accept="image/*" required>
                         </div>
                     </div><br>
 
@@ -93,7 +109,8 @@ $res1=mysqli_query($conn,$sql1);
 
                         </div>
                         <div class="col col-sm">
-                            <button type="submit" id="submit" name="submit" class="btn btn-primary left">Add</button>
+                            <button type="submit" id="submit" name="submit" class="btn btn-primary">Add Course</button>
+                             <a id="cancel" name="cancel" class="btn btn-light" href="index.php">Cancel</a>
                         </div>
                     </div><br>
 

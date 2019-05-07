@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col" style="margin:auto;">
 
-                <h2><a href="index.php"><i class="fa fa-graduation-cap" style="color:gold"></i><i style="color:lightgoldenrodyellow">E-Learning</i></a></h2>
+                 <a href="index.php"> <img class="img-fluid" src="./images/n3logo.png" alt="logo" style=""></a>
 
             </div>
             <div class="col">
@@ -34,7 +34,7 @@
             </div>
             <div class="col" style="margin:auto">
                 <h3 style="color:lightgrey">Contact Us</h3>
-                <span>Ankit Chauhan <br>Address: ground floor, Abc building, Bazpur,<br> Uttarakhand 262401</span><br>
+                <span>Ankit Chauhan <br>Address: H-176, Chauhan Niwas, Bazpur, Uttarakhand 262401</span><br>
                 <i class="fa fa-whatsapp fa-lg" title="Message us on Whatsapp"></i> :
                 <a href="https://api.whatsapp.com/send?phone=91858888" target="_blank"><u>+91-858888</u> </a><br>
                 <i class="fa fa-envelope fa-lg" title="Mail us"></i> :
