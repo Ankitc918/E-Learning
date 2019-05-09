@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php 
 
 include('include/conn.php');
@@ -66,19 +67,11 @@ $res1=mysqli_query($conn,$sql1);
                     
                     </p>
                     </div>
-  <video playsinline="playsinline" height="auto" width="100%" autoplay="autoplay" muted="muted" loop="loop">
-    <source src="/media/1.mov" type="video/*">
-  </video>
-  <div class="container h-100">
-    <div class="d-flex h-100 text-center align-items-center">
-      <div class="w-100 text-white">
-        <h1 class="display-3">Video Header</h1>
-        <p class="lead mb-0">With HTML5 Video and Bootstrap 4</p>
-      </div>
-    </div>
-  </div>
-                </div>
+                   
             </div>
+                </div>
+               
+            
 
         </div>
     </div>

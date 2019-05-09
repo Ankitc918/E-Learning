@@ -10,7 +10,7 @@ $heading=$_GET["heading"];
 
 <head>
     <title>
-        <?php echo "mtitle" ?> | E-Learning</title>
+        <?php echo "".$course."-".$heading."" ?> | Smart-Learn</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
@@ -62,7 +62,7 @@ $heading=$_GET["heading"];
                                 if(mysqli_num_rows($res)>0)
                                 {
                                 while($row=mysqli_fetch_assoc($res)){
-                                echo "<tr><td><a style='color:#797979;' href='course_content.php?course=".$course."&heading=".$row["heading"]."'><i class='fa fa-caret-right'>&nbsp;</i>".$row["course"]." - ".$row["heading"]."</a></td></tr>";
+                                echo "<tr><td><a class='wow fadeInUp' style='color:#797979;' href='course_content.php?course=".$course."&heading=".$row["heading"]."'><i class='fa fa-caret-right'>&nbsp;</i>".$row["course"]." - ".$row["heading"]."</a></td></tr>";
             
                                 }
                                 }
@@ -87,11 +87,32 @@ $heading=$_GET["heading"];
                         </div>
                     </div>
                     <hr>
-                   
+                    
+                    <!-- fetching previous and next records php code here  -->
+                   <?php
+                        $fetch_id=mysqli_query($conn,"SELECT id,heading FROM course_content WHERE course='".$course."' AND heading='".$heading."'");
+                                 $curr_id=mysqli_fetch_assoc($fetch_id);
+                                
+                        $fetch_prev=mysqli_query($conn,"select * from course_content where id = (select max(id) from course_content where id < ".$curr_id["id"].")");
+                                 $prev=mysqli_fetch_assoc($fetch_prev);
+                                 if($curr_id["heading"]=="Home"){
+                                     
+                                     $prev_heading="Home";
+                                 }else{
+                                 $prev_heading=$prev["heading"];
+                                 }
+                                 
+                        $fetch_next=mysqli_query($conn,"select * from course_content where id = (select min(id) from course_content where id > ".$curr_id["id"].")");
+                                 $next=mysqli_fetch_assoc($fetch_next);
+                                 $next_heading=$next["heading"];
+                               
+                    ?>
+                    <!-- previous and next records fetching ends here -->
+                    
                     <div class='row'>
-                        <span class='col left'><a href='course_content.php?course=<?php echo $course ?>&heading=Home'><button class='btn btn-light'><i class='fa fa-arrow-circle-left'> Previous Page</i></button></a></span>
+                        <span class='col left'><a href='course_content.php?course=<?php echo $course ?>&heading=<?php echo $prev_heading; ?>'><button class='btn btn-light'><i class='fa fa-arrow-circle-left'></i> Previous Page</button></a></span>
                         <span class='col center'><?php echo"<a target='_blank' href='converttopdf.php?course=".$course."&heading=".$heading."'><button class='btn btn-light'><i class='fa fa-file-pdf-o'></i> Pdf version</button></a>"; ?></span>
-                        <span class='col right'><button class='btn btn-light'>Next Page <i class='fa fa-arrow-circle-right'></i></button></span>
+                        <span class='col right'><a href='course_content.php?course=<?php echo $course ?>&heading=<?php echo $next_heading; ?>'><button class='btn btn-light'> Next Page <i class='fa fa-arrow-circle-right'></i></button></a></span>
                     </div>
                     <hr>
                     <div class='coursebody'>
@@ -102,7 +123,7 @@ $heading=$_GET["heading"];
                                 {
                                 while($row=mysqli_fetch_assoc($res)){
                                     echo "<h2 class='subheading'>".$cname." - ".$row["heading"]."</h2><br>";
-                                echo "<div class='contentbody'>".$row["content"]."</div>";
+                                echo "<div class='contentbody wow fadeInUp'>".$row["content"]."</div>";
                                 
                                 }
                                 }
@@ -113,9 +134,10 @@ $heading=$_GET["heading"];
 
                     </div>
                     <hr>
-                    <div class='row'>
-                        <span class='col left'><button class='btn btn-light'><i class='fa fa-arrow-circle-left'> Previous Page</i></button></span>
-                        <span class='col right'><button class='btn btn-light'>Next Page <i class='fa fa-arrow-circle-right'></i></button></span>
+                   <div class='row'>
+                        <span class='col left'><a href='course_content.php?course=<?php echo $course ?>&heading=<?php echo $prev_heading; ?>'><button class='btn btn-light'><i class='fa fa-arrow-circle-left'></i> Previous Page</button></a></span>
+                        <span class='col center'><?php echo"<a target='_blank' href='converttopdf.php?course=".$course."&heading=".$heading."'><button class='btn btn-light'><i class='fa fa-file-pdf-o'></i> Pdf version</button></a>"; ?></span>
+                        <span class='col right'><a href='course_content.php?course=<?php echo $course ?>&heading=<?php echo $next_heading; ?>'><button class='btn btn-light'> Next Page <i class='fa fa-arrow-circle-right'></i></button></a></span>
                     </div>
                     <hr>
                 </div>

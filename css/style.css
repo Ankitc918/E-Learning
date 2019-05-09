@@ -281,7 +281,9 @@ a:hover {
     font-family: Verdana,Geneva,Tahoma,Arial,Helvetica,sans-serif!important;
 }
 
-
+.followlink>a{
+    padding: 3px;
+}
 .wrap100 {
     width: 100%;
 }

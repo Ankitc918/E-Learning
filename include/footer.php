@@ -43,7 +43,7 @@
             <div class="col center" style="margin:auto">
                 <h3 style="color:lightgrey">Follow</h3>
                 <h5>
-                    <ul>
+                    <ul class="followlink">
                         <a href="https://www.facebook.com/Ankitc918" target="_blank">
                             <li class="fa fa-facebook fa-lg" title="Follow us on Facebook"></li>
                         </a>

@@ -5,7 +5,7 @@ include('include/conn.php');
 <html>
 
 <head>
-    <title>E-Learning Home</title>
+    <title>Smart-Learn Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
@@ -21,6 +21,7 @@ include('include/conn.php');
 </head>
 
 <body>
+   
     <div class="">
         <section class="heading" style="padding-top:30px;padding-bottom:15px">
             <div class="center wow bounce">
@@ -37,20 +38,20 @@ include('include/conn.php');
                 </ul>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="wow shake" src="images/slidern1.jpg" alt="Los Angeles">
+                        <img class="wow shake" src="images/slidern1.jpg" alt="slide 1">
                          
                         <div class="carousel-caption wow fadeInLeft">
                              <h3>Programming is Fun!</h3>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="wow swing" src="images/slidern2.jpg" alt="Chicago">
+                        <img class="wow swing" src="images/slidern2.jpg" alt="slide 2">
                         <div class="carousel-caption wow fadeInLeft">
                             <h3>Easy to Learn!</h3>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="wow bounce" src="images/slider3.jpg" alt="New York">
+                        <img class="wow bounce" src="images/sliderfree1%20#.png" alt="slide 3">
                         <div class="carousel-caption wow fadeInLeft">
                             <h3>We can do a lot through programming!</h3>
                         </div>

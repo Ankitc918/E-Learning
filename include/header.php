@@ -5,8 +5,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
     <script>new WOW().init();</script>
     <link rel="stylesheet" href="css/animate.css" type="text/css">
+   
 </head>
 <header>
+
+
+
+<script>
+// Add active class to the current button (highlight it)
+var header = document.getElementById("topmenu");
+var btns = header.getElementsByClassName("nav-item");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+</script>
+
     <div class="header">
         <div class="row wrap90" style="padding-top:8px;padding-bottom:8px">
             <div class="col col-sm-3 left" style="margin:auto;">
@@ -17,9 +34,9 @@
             <!--  full screen menu -->
             <div class="col col-sm-9 right fullmenu" style="margin:auto">
                 <nav class="navbar navbar-expand-sm right">
-                    <ul class="navbar-nav" role="tablist">
+                    <ul class="navbar-nav" id="topmenu" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link active" href="index.php"><i class="fa fa-home"></i> Home</a>
+                            <a class="nav-link" href="index.php"><i class="fa fa-home"></i> Home</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="courses" href="#"><i class="fa fa-book"></i> Courses</a>
