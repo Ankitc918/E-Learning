@@ -35,11 +35,10 @@ $res1=mysqli_query($conn,$sql1);
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-
+    
 </head>
 
-<body>
+<body >
     <div class="row" style="margin:0px;margin-top:10px;padding:0px;">
         <div class="col col-2">
             <?php include('include/header.php');  ?>
@@ -48,10 +47,10 @@ $res1=mysqli_query($conn,$sql1);
         <div class="col col-10">
 
 
-            <div id="Add" class="w3-container blog " style="display">
-                <h2 style="color:#4880db" class="center">Welcome Admin</h2>
+            <div id="Add" class="w3-container blog " style="border-radius:15px;">
+                <h2 style="color:#096d96;background-color:#eee;" class="center">Welcome <?php echo ucfirst($_SESSION["name"]); ?></h2>
                 <div class="bg-white ">
-                   <div class="container">
+                   <div class="container" style="padding:10px;">
                     
                     <p>
                         Smart-Learn allows admin to use CRUD operations on the courses and their content.<br>
@@ -63,7 +62,7 @@ $res1=mysqli_query($conn,$sql1);
                             <li>Delete</li>
                             <li>Read</li>
                         </ul>
-                   <i class="fa fa-arrow-left fa-2x"></i> You can perform CRUD operations using the side menu bar given on the left side of the page.<br>
+                   <span class="wow shake"><i class="fa fa-arrow-left fa-2x"></i></span> You can perform CRUD operations using the side menu bar given on the left side of the page.<br>
                     
                     </p>
                     </div>

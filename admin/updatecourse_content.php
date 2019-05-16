@@ -37,7 +37,7 @@ $res1=mysqli_query($conn,$sql1);
 
 
             <div id="Add" class="w3-container center" style="display">
-                <h2 style="color:#4880db">Update Course Content</h2>
+                <h2 style="color:#096d96;background-color:#eee;">Update Course Content</h2>
 
                 <div class="container" style="background-color:white;border-radius:5px;">
                     <br>

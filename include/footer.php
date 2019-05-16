@@ -1,12 +1,12 @@
 <div class="footer" style="margin-top:50px;">
     <div class="wrap90" style="padding:2px;font-size:16px">
         <div class="row">
-            <div class="col" style="margin:auto;">
+            <div class="col col-sm-6 col-md-3 col-lg-3" style="margin:auto;">
 
                  <a href="index.php"> <img class="img-fluid" src="./images/n3logo.png" alt="logo" style=""></a>
 
             </div>
-            <div class="col">
+            <div class="col col-sm-6 col-md-3 col-lg-3">
                 <h3 style="color:lightgrey">COURSES</h3>
                
                 <ul class="links" style="display:grid;">
@@ -32,7 +32,7 @@
                 </ul>
                
             </div>
-            <div class="col" style="margin:auto">
+            <div class="col col-sm-6 col-md-3 col-lg-3" style="margin:auto">
                 <h3 style="color:lightgrey">Contact Us</h3>
                 <span>Ankit Chauhan <br>Address: H-176, Chauhan Niwas, Bazpur, Uttarakhand 262401</span><br>
                 <i class="fa fa-whatsapp fa-lg" title="Message us on Whatsapp"></i> :
@@ -40,7 +40,7 @@
                 <i class="fa fa-envelope fa-lg" title="Mail us"></i> :
                 <a href="mailto:onlineexamsystembyankit@gmail.com" target="_blank"><u>ankitc918@gmail.com</u></a>
             </div>
-            <div class="col center" style="margin:auto">
+            <div class="col col-sm-6 col-md-3 col-lg-3 center" style="margin:auto">
                 <h3 style="color:lightgrey">Follow</h3>
                 <h5>
                     <ul class="followlink">

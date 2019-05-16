@@ -54,7 +54,7 @@ include('include/header.php');
             </div>
             <br>
             <div class="row" style="border-radius:5px;background-color:white;">
-                <div class="col col-5" style="background-color:lavender;color:black;">
+                <div class="col col-sm-12 col-md-5 col-lg-5" style="background-color:lavender;color:black;">
                     <div class="row">
                         <div class="col">
                             <figure class="developer wow flip" style="margin:5px;margin-left:-10px;">
@@ -76,7 +76,7 @@ include('include/header.php');
                         </div>
                     </div>
                 </div>
-                <div class="col col-7 center left">
+                <div class="col col-sm-12 col-md-7 col-lg-7 center left">
                     <h6>Always willing to innovate the new things which can improve the existing technology.<br> MTA-IND, Noida helped me learn web development in efficient & interactive way during my internship period.
 I also worked as a part of web development team in MTA-IND, Noida. It was a great experience working with the team, they are supportive and helpful.</h6>
                 </div>

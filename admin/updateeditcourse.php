@@ -35,7 +35,7 @@ $getid=$_GET["id"];
 
             <div id="Add" class="w3-container blog" style="display">
                 <span class="right"><a class="btn btn-dark" href="updatecourse.php">Back</a></span>
-                <h2 style="color:#4880db" class="center">Edit Course Details</h2>
+                <h2 style="color:#096d96;background-color:#eee;" class="center">Edit Course Details</h2>
 
                 <div class="container" style="background-color:white;border-radius:5px;">
                     <br>

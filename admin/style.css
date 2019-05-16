@@ -1,3 +1,8 @@
-body{
-    background-color: #eee;
-}
+ body{
+        
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background:linear-gradient(90deg, rgba(203, 170, 170, 0.7), rgba(72, 130, 120, 0.7) ),url(../images/admin%20bg.jpg) ;
+        
+    }

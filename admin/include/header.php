@@ -44,9 +44,9 @@
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-
+    
     <style>
-      
+        
         a {
             color: #096d96;
         }
@@ -58,6 +58,10 @@
         ul{
             list-style: none;
             padding: 15px;
+        }
+        header{
+            position: sticky;
+            top: 0;
         }
 
     </style>
@@ -77,21 +81,22 @@
 </head>
 
 <body class="layout-container ls-top-navbar layout-sidebar-l3-md-up">
-
+<header>
     <!-- Navbar -->
     <nav class="navbar navbar-dark">
         <a href="../index.php" title="Smart-Learn Home" style="background-color:#096d96;border-radius:15px;"><img class="img-fluid" src="../images/n3logo.png" alt="logo" style="height:160px"></a>
         
-        <a id='adminpanel' href="../logout.php" style="margin:5px"><i class="fa fa-user"></i>
-            <?php echo $_SESSION["name"];?>(Logout)</a>
+        <a id='adminpanel' href="../logout.php" style="padding:10px;margin:5px"><i class="fa fa-user"></i>
+            <?php echo ucfirst($_SESSION["name"]);?>(Logout)</a>
 
     </nav>
     <!-- // END Navbar -->
-<a href="index.php" title="Admin Home" class="sidebar-link sidebar-user m-b-0">
+    <div  style="background-color:white;border-radius:5px;">
+<a href="index.php" title="Admin Home" class="sidebar-link sidebar-user m-b-0" style="padding:15px;">
             <i class="fa fa-home"></i> Smart-Learn(Admin)
         </a>
     <!-- Sidebar -->
-    <div class="sidebar bg-light" id="sidebarLeft" style="border-radius:5px;" data-scrollable>
+    <div class="sidebar bg-light" id="sidebarLeft" data-scrollable>
 
         <!-- Menu -->
         <ul class="sidebar-menu sm-bordered sm-active-button-bg" data-toggle="sidebar-collapse">
@@ -104,11 +109,11 @@
                             </li>
 
                     <li class="sidebar-menu-item">
-                        <a class="sidebar-menu-button" href="updatecourse.php"><i class="fa fa-minus"></i> Update Course</a>
+                        <a class="sidebar-menu-button" href="updatecourse.php"><i class="fa fa-edit"></i> Modify Course</a>
                         
                     </li>
                     <li class="sidebar-menu-item">
-                                <a class="sidebar-menu-button" href="updatecourse_content.php"><i class="fa fa-minus"></i> Update Content</a>
+                                <a class="sidebar-menu-button" href="updatecourse_content.php"><i class="fa fa-edit"></i> Modify Content</a>
                             </li>
                     
               
@@ -116,7 +121,8 @@
         </ul>
         <!-- // END Menu -->
 
-
     </div>
+    </div>
+    </header>
     </body>
 </html>

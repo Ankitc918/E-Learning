@@ -30,7 +30,7 @@ if(isset($_POST['login']))
     
     }
     else{
-        $msg="Not registered!Register first";
+        $msg="<div style='color:red'>Incorrect username or password! Try again.</div>";
     }
     if($res){
         if(!empty($_POST["remember"])){

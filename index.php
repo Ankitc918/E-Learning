@@ -51,7 +51,7 @@ include('include/conn.php');
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="wow bounce" src="images/sliderfree1%20#.png" alt="slide 3">
+                        <img class="wow bounce" src="images/slidern3.jpg" alt="slide 3">
                         <div class="carousel-caption wow fadeInLeft">
                             <h3>We can do a lot through programming!</h3>
                         </div>
@@ -90,7 +90,7 @@ if(mysqli_num_rows($res)>0)
         if($i%2!=0){
         echo "<div class='row course1' style='background-image: linear-gradient(90deg, rgba(9, 150, 230, 0.5), rgba(72, 130, 120, 0.7)), url(data:image/*;base64,".base64_encode($row["c_image"]).");'>
                     
-                    <div class='col col-md-6 center'>
+                    <div class='col col-sm-12 col-md-6 col-lg-6 center'>
                         <span class='wow fadeIn' data-wow-delay='.4s' style='font-size:80px;color:#eee;font-family:Love Ya Like A Sister, cursive;'>Learn ".$row["c_name"]."</span>
                         <p class='wow fadeInRight' data-wow-delay='.5s'>".$row["c_description"]."</p>
                         <a href='course_content.php?course=".$row["c_name"]."&heading=".$default."'><button class='btn1 wow fadeInUp' data-wow-delay='.6s'>
@@ -104,14 +104,14 @@ if(mysqli_num_rows($res)>0)
         else{
             echo "<div class='row course2'>
 
-                    <div class='col col-md-6 center'>
+                    <div class='col col-sm-12 col-md-6 col-lg-6 center'>
                         <span class='wow fadeIn' data-wow-delay='.4s' style='font-size:80px;color:#000;font-family:Love Ya Like A Sister, cursive;'>Learn ".$row["c_name"]."</span>
                         <p class='wow fadeInLeft' data-wow-delay='.5s'>".$row["c_description"]."</p>
                         <a href='course_content.php?course=".$row["c_name"]."&heading=".$default."'><button class='btn2 wow fadeInUp' data-wow-delay='.6s'>
                             Start Learning <i class='fa fa-external-link'></i>
                         </button></a>
                     </div>
-                    <div class='col col-md-6'>
+                    <div class='col col-sm-12 col-md-6 col-lg-6'>
                         <img src='data:image/*;base64,".base64_encode($row["c_image"])."' class='container' style='opacity:.8'>
                     </div>
 

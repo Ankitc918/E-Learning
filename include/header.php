@@ -11,18 +11,7 @@
 
 
 
-<script>
-// Add active class to the current button (highlight it)
-var header = document.getElementById("topmenu");
-var btns = header.getElementsByClassName("nav-item");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-  var current = document.getElementsByClassName("active");
-  current[0].className = current[0].className.replace(" active", "");
-  this.className += " active";
-  });
-}
-</script>
+
 
     <div class="header">
         <div class="row wrap90" style="padding-top:8px;padding-bottom:8px">
@@ -33,6 +22,9 @@ for (var i = 0; i < btns.length; i++) {
             </div>
             <!--  full screen menu -->
             <div class="col col-sm-9 right fullmenu" style="margin:auto">
+               <div class="Navbar__Link-toggle">
+      <i class="fa fa-bars"></i>
+    </div>
                 <nav class="navbar navbar-expand-sm right">
                     <ul class="navbar-nav" id="topmenu" role="tablist">
                         <li class="nav-item">
@@ -72,7 +64,7 @@ for (var i = 0; i < btns.length; i++) {
                         <?php } else{?>
                         <li class="nav-item">
                             <a id="logout" class="nav-link" style="margin-top:-8px;"><a href="logout.php"><i class="fa fa-id-badge"></i>
-                                    <?php print $_SESSION["name"] ?>(logout)</a></a>
+                                    <?php print ucfirst($_SESSION["name"]); ?>(logout)</a></a>
                         </li>
                         <?php $sql="SELECT * FROM login WHERE username='".$_SESSION["name"]."' AND usertype='admin'";
                             $res=mysqli_query($conn,$sql);
@@ -123,5 +115,13 @@ for (var i = 0; i < btns.length; i++) {
         }, 1000);
         return false;
     }
+    
+    function classToggle() {
+  const navs = document.querySelectorAll('.nav-item')
+  
+  navs.forEach(nav => nav.classList.toggle('Navbar__ToggleShow'));
+}
+
+document.querySelector('.Navbar__Link-toggle').addEventListener('click', classToggle);
 
 </script>

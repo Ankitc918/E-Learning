@@ -28,6 +28,7 @@ $heading=$_GET["heading"];
     <div class="">
         <br>
         <br>
+        
         <h2 class="center" style="color:red;"><?php if(!empty($msg)){echo $msg;} ?></h2>
         <section class="content">
            <?php 
@@ -42,7 +43,7 @@ $heading=$_GET["heading"];
 
     ?>
             <div class='row wrap90'>
-                <div class='col col-3 courseheaderleft'>
+                <div class='col col-sm-12 col-md-3 col-lg-3 courseheaderleft'>
                     <div class="">
                         <img class='icon1' alt='course icon' src='<?php echo $cicon ?>'>
                     </div>
@@ -50,6 +51,7 @@ $heading=$_GET["heading"];
                         <h5>learn  <?php echo $cname ?></h5>
                     </div>
                     <hr>
+                    
                     <div class='courseindex'>
                        <h4 class='center' style='color:white;background-color:#4880db;padding:5px'><?php echo $cname ?> Tutorial</h4>
                         <hr>
@@ -76,7 +78,7 @@ $heading=$_GET["heading"];
                         </div>
                     </div>
                 </div>
-                <div class='col col-8 courseheader'>
+                <div class='col col-sm-12 col-md-8 col-lg-8 courseheader'>
                     <div class='row courseheader1'>
                         <div class='left'>
                             <img class='icon2' src='<?php echo $cicon ?>' alt='icon'>
@@ -104,7 +106,12 @@ $heading=$_GET["heading"];
                                  
                         $fetch_next=mysqli_query($conn,"select * from course_content where id = (select min(id) from course_content where id > ".$curr_id["id"].")");
                                  $next=mysqli_fetch_assoc($fetch_next);
-                                 $next_heading=$next["heading"];
+                                 if($next){
+                                    $next_heading=$next["heading"];
+                                 }
+                                 else{
+                                     $next_heading=$_GET["heading"];
+                                 }
                                
                     ?>
                     <!-- previous and next records fetching ends here -->

@@ -48,7 +48,7 @@ $res1=mysqli_query($conn,$sql1);
 
 
         <div id="Add" class="w3-container blog" style="display">
-            <h2 style="color:#4880db" class="center">Add Course Content</h2>
+            <h2 style="color:#096d96;background-color:#eee;" class="center">Add Course Content</h2>
             <form action="" id="addcourse_contenttodb" class="form-group" method="POST" style="background-color:white;border-radius:5px;">
                 <div class="container">
                     <br>

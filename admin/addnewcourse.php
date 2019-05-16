@@ -66,7 +66,7 @@ if(mysqli_num_rows($res1)>0){
      
 
         <div id="Add" class="w3-container blog" style="display">
-            <h2 style="color:#4880db" class="center">Add New Course</h2>
+            <h2 style="color:#096d96;background-color:#eee;" class="center">Add New Course</h2>
             <form action="" id="addcoursetodb" class="form-group" method="POST"  enctype="multipart/form-data" style="background-color:white;border-radius:5px;">
                 <div class="container">
                     <br>
