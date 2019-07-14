@@ -2,6 +2,8 @@
 <?php
 include('include/conn.php');
 require('pdfcrowd/pdfcrowd.php');
+session_start();
+if(!empty($_SESSION["name"])){
 $sql="SELECT * FROM course_content WHERE course='".$_GET["course"]."' AND heading='".$_GET["heading"]."'";
 $res=mysqli_query($conn,$sql);
 if(mysqli_num_rows($res)>0){
@@ -47,5 +49,9 @@ $result = file_get_contents('http://api.html2pdfrocket.com/pdf', false, $context
         echo "<script>alert('file saved successfully!!');self.close();</script>";
 else{
     echo"<script>alert('some error occurred while saving!');self.close();</script>";
+}
+}
+else{
+    echo"<script>alert('You are not logged in. Login first then continue!!');self.close();</script>";
 }
 ?>
