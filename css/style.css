@@ -304,6 +304,33 @@ a:hover {
     margin-right: 300px;
 }
 
+
+.Navbar__Link-toggle {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-item,
+  .navbar {
+    flex-direction: column;
+  }
+.nav-item{
+    display:none;
+  }
+.Navbar__Items--right {
+    margin-left:0;
+  }
+.Navbar__ToggleShow {
+    display: flex;
+  }
+.Navbar__Link-toggle {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer;
+   } 
+}
+
 @media (min-width: 768px) and (max-width: 1024px) and (orientation:portrait) {
     .wrap90 {
         margin-right: 20px;
@@ -727,27 +754,4 @@ a:hover {
 /* experimental code here */
 
 
-.Navbar__Link-toggle {
-  display: none;
-}
-@media only screen and (max-width: 768px) {
-  .nav-item,
-  .navbar {
-    flex-direction: column;
-  }
-.nav-item{
-    display:none;
-  }
-.Navbar__Items--right {
-    margin-left:0;
-  }
-.Navbar__ToggleShow {
-    display: flex;
-  }
-.Navbar__Link-toggle {
-    align-self: flex-end;
-    display: initial;
-    position: absolute;
-    cursor: pointer;
-   } 
-}
+

@@ -53,7 +53,8 @@ $res1=mysqli_query($conn,$sql1);
                    <div class="container" style="padding:10px;">
                     
                     <p>
-                        Smart-Learn allows admin to use CRUD operations on the courses and their content.<br>
+                        Smart-Learn allows admin to use CRUD operations on the courses and their content. You can also use CRUD operations on remove user, add/remove admins, remove queries.
+                        <br>
                         Check Create, Read, Update, or Delete boxes to grant specific rights to allow the administrator to perform these tasks from the Admin Panel page in their Admin console.
                         
                        <ul style="list-style-type:disc">

@@ -100,6 +100,26 @@
 
         <!-- Menu -->
         <ul class="sidebar-menu sm-bordered sm-active-button-bg" data-toggle="sidebar-collapse">
+                   <li class="sidebar-menu-item">
+                        <a class="sidebar-menu-button" href="addnewadmin.php"><i class="fa fa-plus"></i> Add New Admin</a>
+                        
+                    </li>
+                    <li class="sidebar-menu-item">
+                        <a class="sidebar-menu-button" href="updateadmin.php"><i class="fa fa-minus"></i> Remove Admin</a>
+                        
+                    </li>
+                    <li class="sidebar-menu-item">
+                        <a class="sidebar-menu-button" href="addnewuser.php"><i class="fa fa-plus"></i> Add New User</a>
+                        
+                    </li>
+                    <li class="sidebar-menu-item">
+                        <a class="sidebar-menu-button" href="updateuser.php"><i class="fa fa-minus"></i> Remove User</a>
+                        
+                    </li>
+                    <li class="sidebar-menu-item">
+                        <a class="sidebar-menu-button" href="updatemessage.php"><i class="fa fa-edit"></i> View Queries</a>
+                        
+                    </li>
                     <li class="sidebar-menu-item">
                         <a class="sidebar-menu-button" href="addnewcourse.php"><i class="fa fa-plus"></i> Add New Course</a>
                         

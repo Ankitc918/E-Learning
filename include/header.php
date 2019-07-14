@@ -1,7 +1,17 @@
 <?php session_start(); ?>
 
 <head>
+   
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister|Trade+Winds" rel="stylesheet">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
     <script>new WOW().init();</script>
     <link rel="stylesheet" href="css/animate.css" type="text/css">
@@ -55,7 +65,13 @@
                             </div>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="blog/index.php"><i class="fa fa-rss"></i> Blog</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="about.php"><i class="fa fa-user"></i> About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.php"><i class="fa fa-envelope"></i> Contact Us</a>
                         </li>
                         <?php if(empty($_SESSION["name"])){ ?>
                         <li class="nav-item">
