@@ -64,7 +64,7 @@ $heading=$_GET["heading"];
                                 if(mysqli_num_rows($res)>0)
                                 {
                                 while($row=mysqli_fetch_assoc($res)){
-                                echo "<tr><td><a class='wow fadeInUp' style='color:#797979;' href='course_content.php?course=".$course."&heading=".$row["heading"]."'><i class='fa fa-caret-right'>&nbsp;</i>".$row["course"]." - ".$row["heading"]."</a></td></tr>";
+                                echo "<tr><td><a class='wow fadeInUp ' style='color:#797979;' href='course_content.php?course=".$course."&heading=".$row["heading"]."'><i class='fa fa-caret-right'>&nbsp;</i>".$row["course"]." - ".$row["heading"]."</a></td></tr>";
             
                                 }
                                 }
